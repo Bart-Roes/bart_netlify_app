@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bart Roes</title>
-    <link>//localhost:7510/nl-nl/</link>
+    <link>//localhost:4616/nl-nl/</link>
     <description>Recent content on Bart Roes</description>
     <generator>Hugo</generator>
     <language>nl-nl</language>
     <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:7510/nl-nl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:4616/nl-nl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Finding a place in Zurich</title>
-      <link>//localhost:7510/nl-nl/projects/projects/</link>
+      <link>//localhost:4616/nl-nl/projects/projects/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/nl-nl/projects/projects/</guid>
-      <description>&lt;link href=&#34;//localhost:7510/rmarkdown-libs/htmltools-fill/fill.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/jquery/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7510/rmarkdown-libs/leaflet/leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/leaflet/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7510/rmarkdown-libs/leafletfix/leafletfix.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/proj4/proj4.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7510/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/leaflet-binding/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7510/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7510/rmarkdown-libs/bootstrap/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7510/rmarkdown-libs/bootstrap/bootstrap.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;div id=&#34;the-rationale&#34; class=&#34;section level1&#34;&gt;&#xA;&lt;h1&gt;The Rationale&lt;/h1&gt;&#xA;&lt;p&gt;Finding an apartment in Zurich can turn out to be challenging. Not that there&#xA;are not enough houses to be found, but to find one that is both affordable as well as&#xA;well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.&lt;/p&gt;</description>
+      <guid>//localhost:4616/nl-nl/projects/projects/</guid>
+      <description>&lt;link href=&#34;//localhost:4616/rmarkdown-libs/htmltools-fill/fill.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/jquery/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4616/rmarkdown-libs/leaflet/leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/leaflet/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4616/rmarkdown-libs/leafletfix/leafletfix.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/proj4/proj4.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4616/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/leaflet-binding/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4616/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4616/rmarkdown-libs/bootstrap/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4616/rmarkdown-libs/bootstrap/bootstrap.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;div id=&#34;the-rationale&#34; class=&#34;section level1&#34;&gt;&#xA;&lt;h1&gt;The Rationale&lt;/h1&gt;&#xA;&lt;p&gt;Finding an apartment in Zurich can turn out to be challenging. Not that there&#xA;are not enough houses to be found, but to find one that is both affordable as well as&#xA;well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>//localhost:7510/nl-nl/contact/</link>
+      <link>//localhost:4616/nl-nl/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/nl-nl/contact/</guid>
+      <guid>//localhost:4616/nl-nl/contact/</guid>
       <description>&lt;p&gt;Hier te bereiken:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/bartroes/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Email: &lt;a href=&#34;mailto:bart.roes@gmail.com&#34; &gt;bart.roes@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Tel: +41784003898&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

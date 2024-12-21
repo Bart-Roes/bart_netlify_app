@@ -30,8 +30,8 @@ params:
   dateFormat: January 2, 2006
   description: Bart's website
   faviconSVG: images/favicon.svg
-  favicon_32: images/favicon-32x32.png
-  favicon_16: images/favicon-16x16.png
+  favicon_32: images/favicon_big.png
+  favicon_16: images/favicon_small.png
   footerContent: "With special thanks to Yihui's blogdown package!"
   hideColorSchemeToggle: no
   hideCredits: no

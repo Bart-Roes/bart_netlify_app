@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Bart Roes</title>
-    <link>//localhost:7510/categories/</link>
+    <link>//localhost:4616/categories/</link>
     <description>Recent content in Categories on Bart Roes</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:7510/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:4616/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demonstração Do Tema</title>
-      <link>//localhost:7510/categories/demonstra%C3%A7%C3%A3o-do-tema/</link>
+      <link>//localhost:4616/categories/demonstra%C3%A7%C3%A3o-do-tema/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/categories/demonstra%C3%A7%C3%A3o-do-tema/</guid>
+      <guid>//localhost:4616/categories/demonstra%C3%A7%C3%A3o-do-tema/</guid>
       <description></description>
     </item>
     <item>
       <title>Sintaxe</title>
-      <link>//localhost:7510/categories/sintaxe/</link>
+      <link>//localhost:4616/categories/sintaxe/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/categories/sintaxe/</guid>
+      <guid>//localhost:4616/categories/sintaxe/</guid>
       <description></description>
     </item>
     <item>
       <title>Syntax</title>
-      <link>//localhost:7510/categories/syntax/</link>
+      <link>//localhost:4616/categories/syntax/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/categories/syntax/</guid>
+      <guid>//localhost:4616/categories/syntax/</guid>
       <description></description>
     </item>
     <item>
       <title>Theme Demo</title>
-      <link>//localhost:7510/categories/theme-demo/</link>
+      <link>//localhost:4616/categories/theme-demo/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/categories/theme-demo/</guid>
+      <guid>//localhost:4616/categories/theme-demo/</guid>
       <description></description>
     </item>
     <item>
       <title>R</title>
-      <link>//localhost:7510/categories/r/</link>
+      <link>//localhost:4616/categories/r/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      <guid>//localhost:7510/categories/r/</guid>
+      <guid>//localhost:4616/categories/r/</guid>
       <description></description>
     </item>
     <item>
       <title>Shiny</title>
-      <link>//localhost:7510/categories/shiny/</link>
+      <link>//localhost:4616/categories/shiny/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/categories/shiny/</guid>
+      <guid>//localhost:4616/categories/shiny/</guid>
       <description></description>
     </item>
     <item>
       <title>Visualisation</title>
-      <link>//localhost:7510/categories/visualisation/</link>
+      <link>//localhost:4616/categories/visualisation/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:7510/categories/visualisation/</guid>
+      <guid>//localhost:4616/categories/visualisation/</guid>
       <description></description>
     </item>
   </channel>
