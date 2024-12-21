@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Bart Roes</title>
+    <link>//localhost:7510/nl-nl/categories/</link>
+    <description>Recent content in Categories on Bart Roes</description>
+    <generator>Hugo</generator>
+    <language>nl-nl</language>
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:7510/nl-nl/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R</title>
+      <link>//localhost:7510/nl-nl/categories/r/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:7510/nl-nl/categories/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shiny</title>
+      <link>//localhost:7510/nl-nl/categories/shiny/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:7510/nl-nl/categories/shiny/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visualisation</title>
+      <link>//localhost:7510/nl-nl/categories/visualisation/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:7510/nl-nl/categories/visualisation/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

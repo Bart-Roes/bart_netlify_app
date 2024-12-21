@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7510&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Finding a place in Zurich · Bart Roes
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Bart Roes">
+<meta name="description" content="
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Rationale
+Finding an apartment in Zurich can turn out to be challenging. Not that there
+are not enough houses to be found, but to find one that is both affordable as well as
+well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.">
+<meta name="keywords" content="Test, Test, Test">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Finding a place in Zurich">
+  <meta name="twitter:description" content="The Rationale Finding an apartment in Zurich can turn out to be challenging. Not that there are not enough houses to be found, but to find one that is both affordable as well as well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.">
+
+<meta property="og:url" content="//localhost:7510/projects/projects/">
+  <meta property="og:site_name" content="Bart Roes">
+  <meta property="og:title" content="Finding a place in Zurich">
+  <meta property="og:description" content="The Rationale Finding an apartment in Zurich can turn out to be challenging. Not that there are not enough houses to be found, but to find one that is both affordable as well as well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2020-05-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-05-09T00:00:00+00:00">
+    <meta property="article:tag" content="R Markdown">
+    <meta property="article:tag" content="Shiny">
+    <meta property="article:tag" content="R">
+
+
+
+
+<link rel="canonical" href="//localhost:7510/projects/projects/">
+
+
+<link rel="preload" href="//localhost:7510/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="//localhost:7510/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="//localhost:7510/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="//localhost:7510/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="//localhost:7510/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="//localhost:7510/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="//localhost:7510/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="//localhost:7510/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="//localhost:7510/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="//localhost:7510/images/apple-touch-icon.png">
+
+<link rel="manifest" href="//localhost:7510/site.webmanifest">
+<link rel="mask-icon" href="//localhost:7510/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="//localhost:7510/">
+      Bart Roes
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="//localhost:7510/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="//localhost:7510/cv/cv_english.html">CV</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="//localhost:7510/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="//localhost:7510/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="//localhost:7510/nl-nl/projects/projects/">Nederlands</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="//localhost:7510/projects/projects/">
+          Finding a place in Zurich
+        </a>
+      </h1>
+    </header>
+
+    
+<link href="//localhost:7510/rmarkdown-libs/htmltools-fill/fill.css" rel="stylesheet" />
+<script src="//localhost:7510/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="//localhost:7510/rmarkdown-libs/jquery/jquery-3.6.0.min.js"></script>
+<link href="//localhost:7510/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="//localhost:7510/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="//localhost:7510/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="//localhost:7510/rmarkdown-libs/proj4/proj4.min.js"></script>
+<script src="//localhost:7510/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="//localhost:7510/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="//localhost:7510/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<link href="//localhost:7510/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.css" rel="stylesheet" />
+<script src="//localhost:7510/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.min.js"></script>
+<link href="//localhost:7510/rmarkdown-libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<script src="//localhost:7510/rmarkdown-libs/bootstrap/bootstrap.min.js"></script>
+
+
+<div id="the-rationale" class="section level1">
+<h1>The Rationale</h1>
+<p>Finding an apartment in Zurich can turn out to be challenging. Not that there
+are not enough houses to be found, but to find one that is both affordable as well as
+well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.</p>
+<p>In this post I will walk through how to retrieve information from the internet
+and subsequently visualise it as you please. Adding a shiny plug-in would
+further allow you to play with some of the filters (in this case my monthly budget).</p>
+</div>
+<div id="the-code" class="section level1">
+<h1>The Code</h1>
+<div id="setup" class="section level2">
+<h2>Setup</h2>
+<p>In the code I used the <code>robotstxt</code>, <code>xml2</code> and <code>rvest</code> to retrieve
+information of the internet, <code>magrittr</code> and <code>tidyverse</code> for general readability,
+<code>glue</code> and <code>foreach</code> to dynamically loop through retrieved sets and finally
+<code>leaflet</code> for the visualisation. <code>jsonlite</code> is used to parse the general JSON
+structure to a format easily interpreted by R.</p>
+<pre class="r"><code>#### Loading the required libraries ####
+library(robotstxt)
+library(xml2)
+library(rvest)
+library(magrittr)
+library(tidyverse)
+library(glue)
+library(foreach)
+library(leaflet)
+library(jsonlite)</code></pre>
+</div>
+<div id="robotsxt" class="section level2">
+<h2>Robotsxt</h2>
+<p>To make sure webscraping from the selected domains is completely legal,
+we can first check the respective url’s with the <code>paths_allowed</code> function.<br />
+For the purpose of this example, we will stick to using the homegate.ch website.</p>
+<pre class="r"><code>#### Making sure scraping is allowed ####
+paths_allowed(
+  path = &quot;https://www.homegate.ch/mieten/immobilien&quot;,
+  domain = &quot;https://www.homegate.ch/&quot;
+) # if the function returns TRUE you are free to access it
+
+# Get entire robotstxt file
+# get_robotstxt(domain = &quot;https://www.homegate.ch/&quot;)</code></pre>
+</div>
+<div id="variable-setup" class="section level2">
+<h2>Variable Setup</h2>
+<p>As much I would have loved to live by the lakeside, I had to put some constraints
+to my housing search. As such, I decided to only look for apartments that would cost
+me under 2k CHF per month. Again, the main source of my housing data was taken from homegate.</p>
+<pre class="r"><code># Set price limit
+price_limit &lt;- 3000
+
+# Set housing site URL
+url &lt;- glue::glue(&quot;https://www.homegate.ch/mieten/immobilien/plz-8000/trefferliste?ah={price_limit}&amp;ac=3&amp;tab=list&amp;tr=2&amp;o=zip-asc&amp;ep=1&quot;)
+
+# Read the URL into R
+real_estate &lt;- read_html(url)</code></pre>
+</div>
+<div id="retrieve-housing-information" class="section level2">
+<h2>Retrieve housing information</h2>
+<p>After we have defined the URL entailing the desired information, we can
+commence retrieving the data. To do this, we first look into how many tabs
+of results correspond to our search criteria. This can be done by selecting the
+relevant html fields. The <code>html_nodes</code> function allows us to retrieve all elements
+corresponding to a specific class from the requested page. To locate the
+name of the class of interest, the <code>SelectorGadget</code> plug-in in Chrome is used.</p>
+<pre class="r"><code># Fetch all page numbers
+page_numbers &lt;- real_estate %&gt;%
+  html_nodes(&quot;.HgPaginationSelector_centerBox_FP80i span&quot;) %&gt;%
+  html_text() |&gt; str_replace_all(&quot;[^0-9]&quot;, &quot;&quot;)
+
+# Only retrieve relevant page number
+page_numbers &lt;- as.double(page_numbers) %&gt;% na.omit
+
+#### Loop through the webpages ####
+apartment_info &lt;- foreach::foreach(i = min(page_numbers):max(page_numbers),
+                 .combine = bind_rows,
+                 .errorhandling = &quot;remove&quot;) %do% {
+  # Base URL
+  url &lt;- glue::glue(&quot;https://www.homegate.ch/mieten/immobilien/plz-8000/trefferliste?ah={price_limit}&amp;ac=3&amp;tab=list&amp;tr=2&amp;o=zip-asc&amp;ep={i}&quot;)
+  real_estate &lt;- read_html(url)
+  
+  #### Fetch data from nodes per class #### 
+  locations &lt;- real_estate %&gt;% 
+    html_nodes(&quot;.HgListingCard_address_JGiFv&quot;) %&gt;%
+    html_text() 
+  
+  # Only keep true location records
+  locations &lt;- locations[stringr::str_detect(locations, &quot;[0-9]{4}&quot;)]
+  
+  # number of rooms
+  rooms &lt;- real_estate %&gt;%
+    html_nodes(&quot;.HgListingRoomsLivingSpace_roomsLivingSpace_GyVgq span:nth-child(1)&quot;) %&gt;%
+    html_text()
+  
+  # price of the apartment
+  price &lt;- real_estate %&gt;%
+    html_nodes(&quot;.HgListingCard_price_JoPAs&quot;) %&gt;%
+    html_text() 
+  
+  price &lt;- price %&gt;%
+    gsub(pattern = &quot;\n&quot;, replacement = &quot;&quot;) %&gt;%
+    gsub(pattern = &quot;&#39;&quot;, replacement = &quot;&quot;) %&gt;%
+    gsub(pattern = &quot;.-&quot;, replacement = &quot;&quot;) 
+  
+  # number of available pictures
+  pictures &lt;- real_estate %&gt;%
+    html_nodes(&quot;.SlidesCounter_slidesCounter_VEGHw&quot;) %&gt;%
+    html_text() %&gt;%
+    str_replace_all(&quot; 1 / &quot;, &quot;&quot;) |&gt; 
+    as.numeric()
+  
+  # link that is followed after clicking on site
+  links &lt;- (real_estate %&gt;% 
+              html_nodes(&quot;a&quot;) %&gt;% html_attr(&quot;href&quot;))[
+                str_detect(real_estate %&gt;% 
+                             html_nodes(&quot;a&quot;) %&gt;% html_attr(&quot;href&quot;),
+                           pattern = &quot;(/mieten/)[0-9]{10}&quot;)
+                ] %&gt;% stringr::str_extract(., &quot;[0-9]{10}&quot;)
+  
+  links &lt;- tibble(links = links) %&gt;%
+    mutate(links = glue::glue(&quot;https://www.homegate.ch/mieten/{links}&quot;)) %&gt;%
+    .$links
+  
+  # joining all information together
+  plz &lt;- c()
+  house_number &lt;- c()
+
+  for(i in 1:length(locations)) {
+    plz[i] &lt;- stringr::str_extract(locations[i], &quot;[0-9]{4}&quot;) 
+    
+    house_number[i] &lt;- stringr::str_extract(locations[i], &quot;[0-9]{1,3}&quot;)
+    house_number[i] &lt;- case_when(nchar(house_number[i]) == 3 &amp; substr(house_number[i],1,1) == 8 ~ NA_character_,
+                                 nchar(house_number[i]) &gt;= 1 ~ house_number[i],
+                                 TRUE ~ NA_character_)
+    
+    locations[i] = gsub(locations[i], pattern = &quot;[0-9]{4}&quot;, replacement = &quot;&quot;)
+  }  
+  
+  apartment_info &lt;- tibble(location = locations,
+                           rooms = rooms,
+                           price = price,
+                           plz = plz,
+                           house_number = house_number,
+                           pictures = pictures,
+                           more_info = links)
+  
+  return(apartment_info)
+}</code></pre>
+</div>
+<div id="geocoding-the-data" class="section level2">
+<h2>Geocoding the data</h2>
+<p>In order to construct a map of available apartments, simly retrieving the
+addresses is not enough. We need to be able to place the apartments on the
+map using their respective longitude and lattitude. A useful tool for retrieving
+longitude and lattitude information is the website <code>nominatim.openstreetmap.org</code>.
+We can call this website by attaching a string of the address of interest and
+retrieve the result as a JSON object. This in turn can again be transformed into
+an R list, which is readable into our environment.</p>
+<pre class="r"><code>#### Geocode the addresses ####
+geocode &lt;- function(name, address){
+  # NOMINATIM SEARCH API URL
+  src_url &lt;- &quot;https://nominatim.openstreetmap.org/search?q=&quot;
+  
+  # CREATE A FULL ADDRESS
+  addr &lt;- address %&gt;%
+    gsub(pattern = &quot;  &quot;, replacement = &quot; &quot;) %&gt;%
+    gsub(pattern = &quot;-&quot;, replacement =  &quot; &quot;) |&gt; 
+    gsub(pattern = &quot; &quot;, replacement =  &quot;+&quot;) |&gt; 
+    stringi::stri_trans_general(&quot;Latin-ASCII&quot;)
+    
+  # CREATE A SEARCH URL BASED ON NOMINATIM API TO RETURN GEOJSON
+  requests &lt;- paste0(src_url, addr, &quot;&amp;format=geojson&quot;)
+  
+  # ITERATE OVER THE URLS AND MAKE REQUEST TO THE SEARCH API
+  loc &lt;- foreach(i = 1:length(requests),
+                 .errorhandling = &quot;remove&quot;,
+                 .combine = bind_rows) %do% {
+    
+    # QUERY THE API TRANSFORM RESPONSE FROM JSON TO R LIST
+    response &lt;- read_html(requests[i]) %&gt;%
+      html_node(&quot;p&quot;) %&gt;%
+      html_text() %&gt;%
+      fromJSON()
+    
+    # FROM THE RESPONSE EXTRACT LATITUDE AND LONGITUDE COORDINATES
+    coordinates &lt;- response$features$geometry$coordinates[[1]]
+    lon &lt;- coordinates[1]
+    lat &lt;- coordinates[2]
+    
+    loc &lt;- tibble(name = name[i], 
+                  address = str_replace_all(addr[i], &quot;%2C&quot;, &quot;,&quot;),
+                  latitude = lat, longitude = lon)
+    
+    return(loc)
+  }
+  
+  return(loc)
+}
+
+geo_data &lt;- geocode(name = apartment_info$location,
+                    address = apartment_info$location)</code></pre>
+</div>
+<div id="generating-the-map" class="section level2">
+<h2>Generating the map</h2>
+<p>Once we have retrieved the coordinates of the apartments, we can plot the data.
+To do this, we use the leaflet package, with in-build maps. For sake of illustration,
+we additionally add a colour to the provided marker. Cheap apartments receive a
+green flag, whereas expensive ones receive a red flag. Apartments that don’t display any
+pricing information get a grey colour marker.</p>
+<p>Finally, we can adjust the information that is retrieved by clicking on the marker.
+Here, we display the address, rent and number of rooms. For further information
+one can click on the more info link.</p>
+<p>The link works as the whole file is rendered in HTML. This allows us to render
+HTML specific keywords and commands like <br> for a newline and href for a link.</p>
+<pre class="r"><code># Add the coordinates to the original dataset
+plot_data &lt;- geo_data %&gt;% unique() %&gt;%
+  left_join(apartment_info,
+            by = c(&quot;name&quot; = &quot;location&quot;))
+
+plot_data$price = plot_data$price |&gt; str_replace_all(&quot;[^0-9]&quot;, &quot;&quot;)
+
+# Colour-code the data based on the price of the apartment
+getColor &lt;- function(data) {
+  lapply(data$price, function(x) {
+    if(is.na(x) | x == &quot;&quot;) {
+      &quot;gray&quot;
+    } else if(as.numeric(x) &lt;= 2000) {
+      &quot;green&quot;
+    } else if(as.numeric(x) &lt;= 2500){
+      &quot;orange&quot;
+    } else {
+      &quot;red&quot;
+    }
+    })
+}
+
+# Specify the colour and the home icon with awesomeIcons
+icons &lt;- awesomeIcons(
+  icon = &quot;home&quot;, 
+  library = &quot;glyphicon&quot;,
+  # iconColor = &quot;#FFFFFF&quot;
+  markerColor = getColor(plot_data)
+)
+
+# Plot the final map using Leaflet
+leaflet(plot_data) %&gt;%
+  addTiles() %&gt;%
+  setView(lat=47.39, lng=8.52, zoom = 12) %&gt;%
+  addAwesomeMarkers(lng = ~plot_data$longitude, 
+                    lat = ~plot_data$latitude,
+                    popup = paste(plot_data$name,&quot;&lt;br&gt;&quot;, 
+                                  &quot;Price: &quot;,plot_data$price,&quot;&lt;br&gt;&quot;,
+                                  &quot;Rooms: &quot;, plot_data$rooms,&quot;&lt;br&gt;&quot;,
+                                  sapply(plot_data$more_info, 
+                                         function(x) {glue(&quot;&lt;a href= {x}&gt;More Info&lt;a&gt;&quot;)})),
+                    icon = icons,
+                    label = ~as.character(plot_data$name))</code></pre>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-1" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[[47.40453065,47.3693795,47.3544187,47.3744489,47.3744489,47.3744489,47.3744489,47.3744489,47.3744489,47.3760226,47.42228285,47.3687841,47.43084085,47.32804373600197,47.4242668,47.38425405,47.386632,47.3994619,47.41841764999999,47.4287298,47.3993285,47.37115855,47.40997865,47.40950895,47.39680885,47.41822255,47.39417435,47.4022172,47.403419,47.3602113,47.42457735,47.35905115,47.37401925,47.35566425,47.35744515,47.38193325,47.4110932,47.4304774,47.4259173,47.3636254,47.35758345,47.39708875,47.35633345,47.4008872,47.3610307,47.4008531,47.3816652,47.4036282,47.3647087,47.37507021874131,47.424128,47.4081596,47.40120565,47.3539857,47.3618446,47.4044036,47.3821287,47.42002825,47.37223805,47.38341625,47.35991989999999,47.40962735,47.37796345,47.40316025,47.38944085,47.4063602,47.4075692,47.42019345,47.4026115,47.39310925,47.39524950000001,47.42265995,47.33013595,47.42331615,47.39386915,47.3496106,47.3614489,47.4240917,47.3808394,47.4042289],[8.500778136393004,8.504075386634774,8.573671300000001,8.5410422,8.5410422,8.5410422,8.5410422,8.5410422,8.5410422,8.529394699999999,8.545621790116826,8.533531,8.542773134229153,8.518500262754376,8.521554296093932,8.528920420472986,8.474015759184315,8.5422622,8.546158931099004,8.543331999999999,8.542172249755554,8.526976963394461,8.481313518053021,8.544606585816759,8.539695418582493,8.505400853699571,8.546834088673535,8.547022474097131,8.491046300000001,8.595560526724135,8.5362282,8.518363048645433,8.521863615295814,8.526745374054133,8.590149469490061,8.512479750429609,8.484010650160393,8.5468378,8.5460408,8.567439890711416,8.589975263347391,8.518279033877459,8.572227410633749,8.541658047841771,8.591781046919918,8.4988894987276,8.4979596,8.534671437164171,8.521592906748467,8.501549443573314,8.522007174432893,8.529704799999999,8.498542031269842,8.576005500000001,8.526655949140281,8.5860149,8.4990367,8.510915200235637,8.544272045280689,8.529536099999998,8.569310034509808,8.526935888917524,8.482591074653744,8.556291661731919,8.484955244572561,8.587551700000001,8.490879396356643,8.509785273055446,8.486822500000001,8.525634491070081,8.520439100000001,8.544834074900187,8.512303433087061,8.53967599563423,8.525193860731417,8.53263322406422,8.526088691275861,8.498847899999999,8.517976871108303,8.569711699999999],{"icon":"home","markerColor":["green","red","green","red","orange","orange","red","red","gray","green","red","gray","green","red","red","red","orange","orange","red","red","orange","orange","red","red","red","red","red","red","red","red","green","orange","red","orange","orange","orange","red","orange","orange","red","red","green","orange","orange","red","orange","red","orange","orange","green","orange","green","red","red","orange","red","red","orange","green","orange","orange","red","red","orange","red","green","orange","orange","red","green","orange","red","red","orange","red","red","red","red","red","orange"],"iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"glyphicon"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Ferdinand-Hodler-Strasse 16,  Zürich <br> Price:  1100 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001770986>More Info<a>","Birmensdorferstrasse 390,  Zürich <br> Price:  2780 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001739696>More Info<a>","Lenggstrasse 67,  Zürich,  Zurich <br> Price:  1450 <br> Rooms:  5.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001678249>More Info<a>"," Zürich <br> Price:  2950 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001653553>More Info<a>"," Zürich <br> Price:  2267 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001761057>More Info<a>"," Zürich <br> Price:  2398 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001738577>More Info<a>"," Zürich <br> Price:  2936 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001643417>More Info<a>"," Zürich <br> Price:  3000 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001717357>More Info<a>"," Zürich <br> Price:   <br> Rooms:  8.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001778941>More Info<a>","Rotwandstrasse 67,  Zürich <br> Price:  1150 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001697043>More Info<a>","Kirchenfeld 59,  Zürich <br> Price:  2645 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001313403>More Info<a>","Dianastrasse 5,  Zürich <br> Price:   <br> Rooms:  6.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001481528>More Info<a>","Caspar Wüst-Strasse 42,  Zürich <br> Price:  1930 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001794775>More Info<a>","Soodstrasse 90,  Zürich <br> Price:  2843 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001794284>More Info<a>","Schwandenholzstrasse 232,  Zürich <br> Price:  2695 <br> Rooms:  4.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001793321>More Info<a>","Gasometerstrasse 23,  Zürich <br> Price:  2713 <br> Rooms:  4.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001792349>More Info<a>","Rautihalde 33,  Zürich <br> Price:  2290 <br> Rooms:  4.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001791657>More Info<a>","Schaffhauserstrasse 165,  Zürich <br> Price:  2314 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001677643>More Info<a>","Schaffhauserstrasse 457,  Zürich <br> Price:  2600 <br> Rooms:  4 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001669598>More Info<a>","Leimgrübelstrasse 16,  Zürich <br> Price:  2638 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001654934>More Info<a>","Schaffhauserstrasse 163,  Zürich <br> Price:  2260 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001532260>More Info<a>","Verena-Conzett-Strasse 4,  Zürich <br> Price:  2310 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001793370>More Info<a>","Riedhofstrasse 378,  Zürich <br> Price:  2950 <br> Rooms:  4.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001782866>More Info<a>","Franklinstrasse 20,  Zürich <br> Price:  2655 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001772290>More Info<a>","Langackerstr. 10,  Zürich <br> Price:  2615 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001772067>More Info<a>","Holderbachweg 4,  Zürich <br> Price:  2990 <br> Rooms:  4.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001756781>More Info<a>","Langensteinenstrasse 32,  Zürich <br> Price:  2600 <br> Rooms:  5.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001701999>More Info<a>","Schaffhauserstrasse 230 A,  Zürich <br> Price:  2630 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001701655>More Info<a>","Limmattalstr. 272,  Zürich <br> Price:  2720 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001668178>More Info<a>","Witikonerstrasse 421,  Zürich <br> Price:  2900 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001789123>More Info<a>","Schwandenwiesen 22,  Zürich <br> Price:  1780 <br> Rooms:  4 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001768062>More Info<a>","Giesshübelstrasse 86,  Zürich <br> Price:  2242 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001591246>More Info<a>","Körnerstrasse 10,  Zürich <br> Price:  2910 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001792859>More Info<a>","Waffenplatzstrasse 80,  Zürich <br> Price:  2380 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001790015>More Info<a>","Stodolastr. 5,  Zürich <br> Price:  2105 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001789987>More Info<a>","Eichbühlstrasse 9,  Zürich <br> Price:  2490 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001789803>More Info<a>","Giblenstrasse 29,  Zürich <br> Price:  2690 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001784439>More Info<a>","Glatttalstrasse 118 K,  Zürich <br> Price:  2120 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001783299>More Info<a>","Ausserdorfstr. 12a,  Zürich <br> Price:  2444 <br> Rooms:  4.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001781881>More Info<a>","Witikonerstrasse 31,  Zürich <br> Price:  2745 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001781304>More Info<a>","Stodolastrasse 7,  Zürich <br> Price:  2924 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001781302>More Info<a>","Griesernweg 27,  Zürich <br> Price:  1995 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001764574>More Info<a>","Karl-Stauffer-Strasse 9,  Zürich <br> Price:  2398 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001753234>More Info<a>","Beckhammer 9,  Zürich <br> Price:  2220 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001731060>More Info<a>","Buchholzstrasse 149,  Zürich <br> Price:  2800 <br> Rooms:  5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001727211>More Info<a>","Rebstockweg 1,  Zürich <br> Price:  2322 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001712327>More Info<a>","Dennlerstr. 22,  Zürich <br> Price:  2570 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001668208>More Info<a>","Wehntalerstrasse 116,  Zürich <br> Price:  2240 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001639505>More Info<a>","Manessestrasse 94,  Zürich <br> Price:  2390 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001794264>More Info<a>","Gutstrasse 158 160 162,  Zürich <br> Price:  1880 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001790784>More Info<a>","Schwandenholzstrasse 202,  Zürich <br> Price:  2485 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001781306>More Info<a>","Wehntalerstrasse 225,  Zürich <br> Price:  1670 <br> Rooms:  4 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001766120>More Info<a>","Bauherrenstr. 50,  Zürich <br> Price:  2757 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001712309>More Info<a>","Balgriststrasse 6,  Zürich <br> Price:  2884 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001685418>More Info<a>","Waffenplatzstrasse 1,  Zürich <br> Price:  2080 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001619907>More Info<a>","Luchswiesenstrasse 156,  Zürich <br> Price:  2790 <br> Rooms:  4 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001791600>More Info<a>","Dennlerstrasse 9,  Zürich <br> Price:  2690 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001781099>More Info<a>","Riedenhaldenstrasse 268a,  Zürich <br> Price:  2390 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001743174>More Info<a>","Rindermarkt 6,  Zürich <br> Price:  1990 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001686904>More Info<a>","Luisenstrasse 26,  Zürich <br> Price:  2420 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001677712>More Info<a>","Forchstrasse 213,  Zürich <br> Price:  2495 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001665344>More Info<a>","Wehntalerstrasse 253,  Zürich <br> Price:  2800 <br> Rooms:  5.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001544422>More Info<a>","Untermoosstrasse 1A,  Zürich <br> Price:  3000 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001484573>More Info<a>","Winterthurerstrasse 312,  Zürich <br> Price:  2490 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001793352>More Info<a>","Herrligstrasse 28,  Zürich <br> Price:  2795 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001790378>More Info<a>","Hirzenbachstrasse 82,  Zürich <br> Price:  1855 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001790035>More Info<a>","Segantinistrasse 195,  Zürich <br> Price:  2440 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001766178>More Info<a>","Riedenhaldenstrasse 260,  Zürich <br> Price:  2290 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001746725>More Info<a>","Winzerstrasse 99,  Zürich <br> Price:  2730 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001677126>More Info<a>","Habsburgstr. 41,  Zürich <br> Price:  1720 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001666903>More Info<a>","Dorfstrasse 66,  Zürich <br> Price:  2490 <br> Rooms:  4 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001655138>More Info<a>","Kirchenfeld 75,  Zürich <br> Price:  2860 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001497266>More Info<a>","Kleeweidstrasse 40,  Zürich <br> Price:  2669 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001791603>More Info<a>","Birchstrasse 408,  Zürich <br> Price:  2267 <br> Rooms:  4.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001789499>More Info<a>","Rosengartenstrasse 8.,  Zürich <br> Price:  2910 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001788457>More Info<a>","Seestrasse 293,  Zürich <br> Price:  2890 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001743168>More Info<a>","Bederstr. 101,  Zürich <br> Price:  2750 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001656246>More Info<a>","Michael-Maggi-Strasse 14,  Zürich <br> Price:  3000 <br> Rooms:  3.5 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001517250>More Info<a>","Zypressenstrasse 146,  Zürich <br> Price:  2760 <br> Rooms:  4 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001787106>More Info<a>","Friedrichstrasse 4,  Zürich <br> Price:  2088 <br> Rooms:  3 Zimmer  <br> <a href= https://www.homegate.ch/mieten/4001783265>More Info<a>"],null,null,null,["Ferdinand-Hodler-Strasse 16,  Zürich","Birmensdorferstrasse 390,  Zürich","Lenggstrasse 67,  Zürich,  Zurich"," Zürich"," Zürich"," Zürich"," Zürich"," Zürich"," Zürich","Rotwandstrasse 67,  Zürich","Kirchenfeld 59,  Zürich","Dianastrasse 5,  Zürich","Caspar Wüst-Strasse 42,  Zürich","Soodstrasse 90,  Zürich","Schwandenholzstrasse 232,  Zürich","Gasometerstrasse 23,  Zürich","Rautihalde 33,  Zürich","Schaffhauserstrasse 165,  Zürich","Schaffhauserstrasse 457,  Zürich","Leimgrübelstrasse 16,  Zürich","Schaffhauserstrasse 163,  Zürich","Verena-Conzett-Strasse 4,  Zürich","Riedhofstrasse 378,  Zürich","Franklinstrasse 20,  Zürich","Langackerstr. 10,  Zürich","Holderbachweg 4,  Zürich","Langensteinenstrasse 32,  Zürich","Schaffhauserstrasse 230 A,  Zürich","Limmattalstr. 272,  Zürich","Witikonerstrasse 421,  Zürich","Schwandenwiesen 22,  Zürich","Giesshübelstrasse 86,  Zürich","Körnerstrasse 10,  Zürich","Waffenplatzstrasse 80,  Zürich","Stodolastr. 5,  Zürich","Eichbühlstrasse 9,  Zürich","Giblenstrasse 29,  Zürich","Glatttalstrasse 118 K,  Zürich","Ausserdorfstr. 12a,  Zürich","Witikonerstrasse 31,  Zürich","Stodolastrasse 7,  Zürich","Griesernweg 27,  Zürich","Karl-Stauffer-Strasse 9,  Zürich","Beckhammer 9,  Zürich","Buchholzstrasse 149,  Zürich","Rebstockweg 1,  Zürich","Dennlerstr. 22,  Zürich","Wehntalerstrasse 116,  Zürich","Manessestrasse 94,  Zürich","Gutstrasse 158 160 162,  Zürich","Schwandenholzstrasse 202,  Zürich","Wehntalerstrasse 225,  Zürich","Bauherrenstr. 50,  Zürich","Balgriststrasse 6,  Zürich","Waffenplatzstrasse 1,  Zürich","Luchswiesenstrasse 156,  Zürich","Dennlerstrasse 9,  Zürich","Riedenhaldenstrasse 268a,  Zürich","Rindermarkt 6,  Zürich","Luisenstrasse 26,  Zürich","Forchstrasse 213,  Zürich","Wehntalerstrasse 253,  Zürich","Untermoosstrasse 1A,  Zürich","Winterthurerstrasse 312,  Zürich","Herrligstrasse 28,  Zürich","Hirzenbachstrasse 82,  Zürich","Segantinistrasse 195,  Zürich","Riedenhaldenstrasse 260,  Zürich","Winzerstrasse 99,  Zürich","Habsburgstr. 41,  Zürich","Dorfstrasse 66,  Zürich","Kirchenfeld 75,  Zürich","Kleeweidstrasse 40,  Zürich","Birchstrasse 408,  Zürich","Rosengartenstrasse 8.,  Zürich","Seestrasse 293,  Zürich","Bederstr. 101,  Zürich","Michael-Maggi-Strasse 14,  Zürich","Zypressenstrasse 146,  Zürich","Friedrichstrasse 4,  Zürich"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.39,8.52],12,[]],"limits":{"lat":[47.32804373600197,47.43084085],"lng":[8.474015759184315,8.595560526724135]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Bart Roes 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="//localhost:7510/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

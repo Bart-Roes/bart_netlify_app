@@ -1,0 +1,106 @@
+baseURL: /
+title: Bart Roes
+theme: hugo-coder
+languageCode: en
+defaultContentLanguage: en
+enableEmoji: yes
+pagination:
+  pagerSize: 20
+canonifyurls: true
+pygmentsstyle: colorful
+pygmentscodefences: true
+pygmentscodefencesguesssyntax: true
+markup:
+  highlight:
+    noClasses: no
+ignoreFiles:
+- \.Rmd$
+- \.Rmarkdown$
+- \_files$
+- \_cache$
+params:
+  author: Bart Roes
+  avatarURL: images/Foto.jpg
+  colorScheme: auto
+  commit: https://github.com/luizdepra/hugo-coder/tree/
+  customCSS: []
+  customJS: []
+  customRemoteJS: []
+  customSCSS: []
+  dateFormat: January 2, 2006
+  description: Bart's website
+  faviconSVG: images/favicon.svg
+  favicon_32: images/favicon-32x32.png
+  favicon_16: images/favicon-16x16.png
+  footerContent: "With special thanks to Yihui's blogdown package!"
+  hideColorSchemeToggle: no
+  hideCredits: no
+  hideCopyright: no
+  hideFooter: no
+  info: Data Analyst and Digital Transformation Enthousiast
+  keywords: Test, Test, Test
+  maxSeeAlsoItems: 5
+  rtl: no
+  since: 2024
+  social:
+    - icon: fa-brands fa-github fa-2x
+      name: Github
+      url: https://github.com/Bart-Roes/
+      weight: 1
+    - icon: fa-brands fa-linkedin fa-2x
+      name: LinkedIn
+      url: https://www.linkedin.com/in/bartroes/
+      weight: 2
+    - icon: fas fa-envelope fa-2x
+      name: Mail
+      url: mailto:bart.roes@gmail.com
+      weight: 3
+    - icon: fas fa-mobile fa-2x
+      name: Mobile
+      url: contact/
+      weight: 4
+taxonomies:
+  author: authors
+  category: categories
+  series: series
+  tag: tags
+languages:
+  en:
+    languageName: 'English'
+    menu:
+      main:
+        - name: About
+          url: about/
+          weight: 1
+        - name: CV
+          url: cv/cv_english.html
+          weight: 2
+        - name: Projects
+          url: projects/
+          weight: 3
+        - name: Contact me
+          url: contact/
+          weight: 5
+  nl-nl:
+    languageName: 'Nederlands'
+    menu:
+      main:
+        - name: Over mij
+          url: about/
+          weight: 1
+        - name: CV
+          url: cv/cv_english.nl-nl.html
+          weight: 2
+        - name: Projecten
+          url: projects/
+          weight: 3
+        - name: Contact
+          url: contact/
+          weight: 5
+    params:
+      author: Bart Roes
+      description: Bart's website
+      info: Data Analyst and Digital Transformation Enthousiast
+      keywords: Test Test Test
+      footerContent: Met dank aan Yihui's blogdown package
+    title: Bart Roes
