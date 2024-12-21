@@ -2,25 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Bart Roes</title>
-    <link>//localhost:4616/series/</link>
+    <link>//localhost:7359/series/</link>
     <description>Recent content in Series on Bart Roes</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:4616/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Demonstração Do Tema</title>
-      <link>//localhost:4616/series/demonstra%C3%A7%C3%A3o-do-tema/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:4616/series/demonstra%C3%A7%C3%A3o-do-tema/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Theme Demo</title>
-      <link>//localhost:4616/series/theme-demo/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:4616/series/theme-demo/</guid>
-      <description></description>
-    </item>
+    <atom:link href="//localhost:7359/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

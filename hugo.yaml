@@ -22,7 +22,6 @@ params:
   author: Bart Roes
   avatarURL: images/Foto.jpg
   colorScheme: auto
-  commit: https://github.com/luizdepra/hugo-coder/tree/
   customCSS: []
   customJS: []
   customRemoteJS: []
