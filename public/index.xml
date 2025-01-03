@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bart Roes</title>
-    <link>//localhost:7359/</link>
+    <link>//localhost:4321/</link>
     <description>Recent content on Bart Roes</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 05 Jan 2023 01:15:52 +0100</lastBuildDate>
-    <atom:link href="//localhost:7359/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:4321/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Autores de Hugo</title>
-      <link>//localhost:7359/autores/autores-de-hugo/</link>
+      <link>//localhost:4321/autores/autores-de-hugo/</link>
       <pubDate>Thu, 05 Jan 2023 01:15:52 +0100</pubDate>
-      <guid>//localhost:7359/autores/autores-de-hugo/</guid>
+      <guid>//localhost:4321/autores/autores-de-hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>temas</title>
-      <link>//localhost:7359/categoria/temas/</link>
+      <link>//localhost:4321/categoria/temas/</link>
       <pubDate>Wed, 04 Jan 2023 23:21:18 +0100</pubDate>
-      <guid>//localhost:7359/categoria/temas/</guid>
+      <guid>//localhost:4321/categoria/temas/</guid>
       <description></description>
     </item>
     <item>
       <title>sintaxe</title>
-      <link>//localhost:7359/categoria/sintaxe/</link>
+      <link>//localhost:4321/categoria/sintaxe/</link>
       <pubDate>Wed, 04 Jan 2023 23:21:06 +0100</pubDate>
-      <guid>//localhost:7359/categoria/sintaxe/</guid>
+      <guid>//localhost:4321/categoria/sintaxe/</guid>
       <description></description>
     </item>
     <item>
       <title>Finding a place in Zurich</title>
-      <link>//localhost:7359/projects/projects/</link>
+      <link>//localhost:4321/projects/projects/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:7359/projects/projects/</guid>
-      <description>&lt;link href=&#34;//localhost:7359/rmarkdown-libs/htmltools-fill/fill.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/jquery/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7359/rmarkdown-libs/leaflet/leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/leaflet/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7359/rmarkdown-libs/leafletfix/leafletfix.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/proj4/proj4.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7359/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/leaflet-binding/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7359/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:7359/rmarkdown-libs/bootstrap/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:7359/rmarkdown-libs/bootstrap/bootstrap.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;div id=&#34;the-rationale&#34; class=&#34;section level1&#34;&gt;&#xA;&lt;h1&gt;The Rationale&lt;/h1&gt;&#xA;&lt;p&gt;Finding an apartment in Zurich can turn out to be challenging. Not that there&#xA;are not enough houses to be found, but to find one that is both affordable as well as&#xA;well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.&lt;/p&gt;</description>
+      <guid>//localhost:4321/projects/projects/</guid>
+      <description>&lt;link href=&#34;//localhost:4321/rmarkdown-libs/htmltools-fill/fill.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/leaflet/leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/leaflet/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/leafletfix/leafletfix.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/proj4/proj4.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/leaflet-binding/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/leaflet-awesomemarkers/leaflet.awesome-markers.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/bootstrap/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/bootstrap/bootstrap.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;div id=&#34;the-rationale&#34; class=&#34;section level1&#34;&gt;&#xA;&lt;h1&gt;The Rationale&lt;/h1&gt;&#xA;&lt;p&gt;Finding an apartment in Zurich can turn out to be challenging. Not that there aren’t enough houses to be found, but to find one that is both affordable as well as well-connected can prove difficult. After spending a fair amount of time searching through housing sites, I decided it was time for a programme to do much of the heavy lifting for me instead.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Bart</title>
-      <link>//localhost:7359/about/</link>
+      <link>//localhost:4321/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:7359/about/</guid>
+      <guid>//localhost:4321/about/</guid>
       <description>&lt;p&gt;&lt;strong&gt;1. Personal Background&lt;/strong&gt;&lt;br&gt;&#xA;&lt;strong&gt;2. Professional Interests&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-personal-background&#34;&gt;&#xA;  1. Personal Background&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-personal-background&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;During my youth, growing up in the province of Utrecht (NL),&#xA;I navigated my way through elementary and high-school, whilst playing&#xA;a multitude of sports on the side. Starting off at the football pitch,&#xA;I switched to road cycling and later to athletics, also participating in&#xA;some duathlon&amp;rsquo;s and a triathlon on the side.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact me</title>
-      <link>//localhost:7359/contact/</link>
+      <link>//localhost:4321/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:7359/contact/</guid>
+      <guid>//localhost:4321/contact/</guid>
       <description>&lt;p&gt;I can be reached here:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/bartroes/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Email: &lt;a href=&#34;mailto:bart.roes@gmail.com&#34; &gt;bart.roes@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

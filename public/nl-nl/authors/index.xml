@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Bart Roes</title>
-    <link>//localhost:7359/nl-nl/authors/</link>
+    <link>//localhost:4321/nl-nl/authors/</link>
     <description>Recent content in Authors on Bart Roes</description>
     <generator>Hugo</generator>
     <language>nl-nl</language>
-    <atom:link href="//localhost:7359/nl-nl/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:4321/nl-nl/authors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

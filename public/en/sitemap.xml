@@ -2,198 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:7359/authors/</loc>
+    <loc>//localhost:4321/authors/</loc>
     <lastmod>2023-01-05T01:15:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/authors/"
+                href="//localhost:4321/nl-nl/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/authors/"
+                href="//localhost:4321/authors/"
                 />
   </url><url>
-    <loc>//localhost:7359/autores/autores-de-hugo/</loc>
+    <loc>//localhost:4321/autores/autores-de-hugo/</loc>
     <lastmod>2023-01-05T01:15:52+01:00</lastmod>
   </url><url>
-    <loc>//localhost:7359/</loc>
+    <loc>//localhost:4321/</loc>
     <lastmod>2023-01-05T01:15:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/"
+                href="//localhost:4321/nl-nl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/"
+                href="//localhost:4321/"
                 />
   </url><url>
-    <loc>//localhost:7359/authors/hugo-authors/</loc>
+    <loc>//localhost:4321/authors/hugo-authors/</loc>
     <lastmod>2023-01-05T01:15:29+01:00</lastmod>
   </url><url>
-    <loc>//localhost:7359/categories/</loc>
+    <loc>//localhost:4321/categories/</loc>
     <lastmod>2023-01-04T23:21:18+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/categories/"
+                href="//localhost:4321/nl-nl/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/categories/"
+                href="//localhost:4321/categories/"
                 />
   </url><url>
-    <loc>//localhost:7359/categoria/temas/</loc>
+    <loc>//localhost:4321/categoria/temas/</loc>
     <lastmod>2023-01-04T23:21:18+01:00</lastmod>
   </url><url>
-    <loc>//localhost:7359/categoria/sintaxe/</loc>
+    <loc>//localhost:4321/categoria/sintaxe/</loc>
     <lastmod>2023-01-04T23:21:06+01:00</lastmod>
   </url><url>
-    <loc>//localhost:7359/projects/projects/</loc>
+    <loc>//localhost:4321/projects/projects/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/projects/projects/"
+                href="//localhost:4321/nl-nl/projects/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/projects/projects/"
+                href="//localhost:4321/projects/projects/"
                 />
   </url><url>
-    <loc>//localhost:7359/projects/</loc>
+    <loc>//localhost:4321/projects/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/projects/"
+                href="//localhost:4321/nl-nl/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/projects/"
+                href="//localhost:4321/projects/"
                 />
   </url><url>
-    <loc>//localhost:7359/tags/r/</loc>
+    <loc>//localhost:4321/tags/r/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/tags/r/"
+                href="//localhost:4321/nl-nl/tags/r/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/tags/r/"
+                href="//localhost:4321/tags/r/"
                 />
   </url><url>
-    <loc>//localhost:7359/categories/r/</loc>
+    <loc>//localhost:4321/categories/r/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/categories/r/"
+                href="//localhost:4321/nl-nl/categories/r/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/categories/r/"
+                href="//localhost:4321/categories/r/"
                 />
   </url><url>
-    <loc>//localhost:7359/tags/r-markdown/</loc>
+    <loc>//localhost:4321/tags/r-markdown/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/tags/r-markdown/"
+                href="//localhost:4321/nl-nl/tags/r-markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/tags/r-markdown/"
+                href="//localhost:4321/tags/r-markdown/"
                 />
   </url><url>
-    <loc>//localhost:7359/tags/shiny/</loc>
+    <loc>//localhost:4321/tags/shiny/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/tags/shiny/"
+                href="//localhost:4321/nl-nl/tags/shiny/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/tags/shiny/"
+                href="//localhost:4321/tags/shiny/"
                 />
   </url><url>
-    <loc>//localhost:7359/categories/shiny/</loc>
+    <loc>//localhost:4321/categories/shiny/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/categories/shiny/"
+                href="//localhost:4321/nl-nl/categories/shiny/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/categories/shiny/"
+                href="//localhost:4321/categories/shiny/"
                 />
   </url><url>
-    <loc>//localhost:7359/tags/</loc>
+    <loc>//localhost:4321/tags/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/tags/"
+                href="//localhost:4321/nl-nl/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/tags/"
+                href="//localhost:4321/tags/"
                 />
   </url><url>
-    <loc>//localhost:7359/categories/visualisation/</loc>
+    <loc>//localhost:4321/categories/visualisation/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/categories/visualisation/"
+                href="//localhost:4321/nl-nl/categories/visualisation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/categories/visualisation/"
+                href="//localhost:4321/categories/visualisation/"
                 />
   </url><url>
-    <loc>//localhost:7359/about/</loc>
+    <loc>//localhost:4321/about/</loc>
   </url><url>
-    <loc>//localhost:7359/contact/</loc>
+    <loc>//localhost:4321/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/contact/"
+                href="//localhost:4321/nl-nl/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/contact/"
+                href="//localhost:4321/contact/"
                 />
   </url><url>
-    <loc>//localhost:7359/series/</loc>
+    <loc>//localhost:4321/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="nl-nl"
-                href="//localhost:7359/nl-nl/series/"
+                href="//localhost:4321/nl-nl/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:7359/series/"
+                href="//localhost:4321/series/"
                 />
   </url>
 </urlset>

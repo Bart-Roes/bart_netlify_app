@@ -15,26 +15,18 @@ slug: projects
 
 # The Rationale
 
-Finding an apartment in Zurich can turn out to be challenging. Not that there
-are not enough houses to be found, but to find one that is both affordable as well as 
-well-connected can prove to be difficult. After spending a fair amount of time searching through apartment aggregators, I decided it was time for a programme to do much of the heavy lifting for me instead.  
+Finding an apartment in Zurich can turn out to be challenging. Not that there aren't enough houses to be found, but to find one that is both affordable as well as well-connected can prove difficult. After spending a fair amount of time searching through housing sites, I decided it was time for a programme to do much of the heavy lifting for me instead.  
   
-In this post I will walk through how to retrieve information from the internet
-and subsequently visualise it as you please. Adding a shiny plug-in would
-further allow you to play with some of the filters (in this case my monthly budget).  
+In this post I will walk through how to retrieve housing information from different sites and visualise it on a map. Adding a shiny plug-in would further allow you to play with some of the filters (in this case my monthly budget).  
   
 # The Code
 
 ## Setup
   
-In the code I used the `robotstxt`, `xml2` and `rvest` to retrieve
-information of the internet, `magrittr` and `tidyverse` for general readability,
-`glue` and `foreach` to dynamically loop through retrieved sets and finally
-`leaflet` for the visualisation. `jsonlite` is used to parse the general JSON
-structure to a format easily interpreted by R.  
+In the code I used the `robotstxt`, `xml2` and `rvest` to retrieve information of the internet, `magrittr` and `tidyverse` for general readability, `glue` and `foreach` to dynamically loop through retrieved sets and finally `leaflet` for the visualisation. `jsonlite` is used to parse the general JSON structure to a format easily interpreted by R.  
 
 ```{r setup, error = FALSE, warning = FALSE, message = FALSE, results='hide'}
-#### Loading the required libraries ####
+# Load libraries
 library(robotstxt)
 library(xml2)
 library(rvest)
@@ -48,17 +40,14 @@ library(jsonlite)
 
 ## Robotsxt
 
-To make sure webscraping from the selected domains is completely legal,
-we can first check the respective url's with the `paths_allowed` function.  
-For the purpose of this example, we will stick to using the homegate.ch website.
-  
+To make sure webscraping from the selected domains is completely legal, we can first check the respective url's with the `paths_allowed` function. For the purpose of this example, we will stick to using the homegate.ch website.  
 
 ```{r robotstxt, error = FALSE, warning = FALSE, message = FALSE, results='hide'}
-#### Making sure scraping is allowed ####
+# Making sure scraping is allowed
 paths_allowed(
   path = "https://www.homegate.ch/mieten/immobilien",
   domain = "https://www.homegate.ch/"
-) # if the function returns TRUE you are free to access it
+) # we expect the function to return TRUE 
 
 # Get entire robotstxt file
 # get_robotstxt(domain = "https://www.homegate.ch/")
@@ -66,9 +55,7 @@ paths_allowed(
   
 ## Variable Setup  
   
-As much I would have loved to live by the lakeside, I had to put some constraints
-to my housing search. As such, I decided to only look for apartments that would cost
-me under 2k CHF per month. Again, the main source of my housing data was taken from homegate.  
+As much I would have loved to live by the lakeside, I had to put some constraints to my housing search. As such, I decided to only look for apartments that would cost me under 3k CHF per month. Again, the main source of my housing data was taken from homegate.  
 
 ```{r parameters, error = FALSE, warning = FALSE, message = FALSE, results='hide'}
 # Set price limit
@@ -83,12 +70,8 @@ real_estate <- read_html(url)
   
 ## Retrieve housing information
 
-After we have defined the URL entailing the desired information, we can
-commence retrieving the data. To do this, we first look into how many tabs
-of results correspond to our search criteria. This can be done by selecting the
-relevant html fields. The `html_nodes` function allows us to retrieve all elements
-corresponding to a specific class from the requested page. To locate the 
-name of the class of interest, the `SelectorGadget` plug-in in Chrome is used.  
+After we have defined the URL entailing the desired information, we can commence retrieving the data. To do this, we first look into how many tabs
+of results correspond to our search criteria. This can be done by selecting the relevant html fields. The `html_nodes` function allows us to retrieve all elements corresponding to a specific class from the requested page. To locate the name of the class of interest, the `SelectorGadget` plug-in in Chrome is used.  
   
 ```{r data_retrieval, error = FALSE, warning = FALSE, message = FALSE, results='hide'}
 # Fetch all page numbers
@@ -99,7 +82,7 @@ page_numbers <- real_estate %>%
 # Only retrieve relevant page number
 page_numbers <- as.double(page_numbers) %>% na.omit
 
-#### Loop through the webpages ####
+# Iterate through the result pages
 apartment_info <- foreach::foreach(i = min(page_numbers):max(page_numbers),
                  .combine = bind_rows,
                  .errorhandling = "remove") %do% {
@@ -107,7 +90,7 @@ apartment_info <- foreach::foreach(i = min(page_numbers):max(page_numbers),
   url <- glue::glue("https://www.homegate.ch/mieten/immobilien/plz-8000/trefferliste?ah={price_limit}&ac=3&tab=list&tr=2&o=zip-asc&ep={i}")
   real_estate <- read_html(url)
   
-  #### Fetch data from nodes per class #### 
+  # Fetch addresses
   locations <- real_estate %>% 
     html_nodes(".HgListingCard_address_JGiFv") %>%
     html_text() 
@@ -115,12 +98,12 @@ apartment_info <- foreach::foreach(i = min(page_numbers):max(page_numbers),
   # Only keep true location records
   locations <- locations[stringr::str_detect(locations, "[0-9]{4}")]
   
-  # number of rooms
+  # Fetch number of rooms
   rooms <- real_estate %>%
     html_nodes(".HgListingRoomsLivingSpace_roomsLivingSpace_GyVgq span:nth-child(1)") %>%
     html_text()
   
-  # price of the apartment
+  # Fetch price of the apartment
   price <- real_estate %>%
     html_nodes(".HgListingCard_price_JoPAs") %>%
     html_text() 
@@ -130,14 +113,14 @@ apartment_info <- foreach::foreach(i = min(page_numbers):max(page_numbers),
     gsub(pattern = "'", replacement = "") %>%
     gsub(pattern = ".-", replacement = "") 
   
-  # number of available pictures
+  # Fetch number of available pictures
   pictures <- real_estate %>%
     html_nodes(".SlidesCounter_slidesCounter_VEGHw") %>%
     html_text() %>%
     str_replace_all(" 1 / ", "") |> 
     as.numeric()
   
-  # link that is followed after clicking on site
+  # Fetch link to the listing 
   links <- (real_estate %>% 
               html_nodes("a") %>% html_attr("href"))[
                 str_detect(real_estate %>% 
@@ -149,7 +132,7 @@ apartment_info <- foreach::foreach(i = min(page_numbers):max(page_numbers),
     mutate(links = glue::glue("https://www.homegate.ch/mieten/{links}")) %>%
     .$links
   
-  # joining all information together
+  # Joining all information together
   plz <- c()
   house_number <- c()
 
@@ -164,6 +147,7 @@ apartment_info <- foreach::foreach(i = min(page_numbers):max(page_numbers),
     locations[i] = gsub(locations[i], pattern = "[0-9]{4}", replacement = "")
   }  
   
+  # Store data in tibble
   apartment_info <- tibble(location = locations,
                            rooms = rooms,
                            price = price,
@@ -179,46 +163,42 @@ apartment_info <- foreach::foreach(i = min(page_numbers):max(page_numbers),
 
 ## Geocoding the data
 
-In order to construct a map of available apartments, simly retrieving the 
-addresses is not enough. We need to be able to place the apartments on the 
-map using their respective longitude and lattitude. A useful tool for retrieving
-longitude and lattitude information is the website `nominatim.openstreetmap.org`.
-We can call this website by attaching a string of the address of interest and
-retrieve the result as a JSON object. This in turn can again be transformed into
-an R list, which is readable into our environment.  
+In order to construct a map of available apartments, simly retrieving the addresses is not enough. We need to be able to place the apartments on the 
+map using their respective longitude and lattitude. A useful tool for retrieving longitude and lattitude information is the website `nominatim.openstreetmap.org`. We can call this website by attaching a string of the address of interest and retrieve the result as a JSON object. This in turn can again be transformed into an R list, which is readable into our environment.  
   
 ```{r geocode, error = FALSE, warning = FALSE, message = FALSE, results='hide'}
-#### Geocode the addresses ####
+# Geocode the addresses
 geocode <- function(name, address){
-  # NOMINATIM SEARCH API URL
+  # Nominatim search API base URL
   src_url <- "https://nominatim.openstreetmap.org/search?q="
   
-  # CREATE A FULL ADDRESS
+  # Format address, remove special characters
   addr <- address %>%
     gsub(pattern = "  ", replacement = " ") %>%
     gsub(pattern = "-", replacement =  " ") |> 
     gsub(pattern = " ", replacement =  "+") |> 
     stringi::stri_trans_general("Latin-ASCII")
     
-  # CREATE A SEARCH URL BASED ON NOMINATIM API TO RETURN GEOJSON
+  # Formulate final API request
   requests <- paste0(src_url, addr, "&format=geojson")
   
-  # ITERATE OVER THE URLS AND MAKE REQUEST TO THE SEARCH API
+  # Iterate over the list of addresses 
   loc <- foreach(i = 1:length(requests),
                  .errorhandling = "remove",
                  .combine = bind_rows) %do% {
     
-    # QUERY THE API TRANSFORM RESPONSE FROM JSON TO R LIST
+    # Query API, retrieve JSON and coerce to R object
     response <- read_html(requests[i]) %>%
       html_node("p") %>%
       html_text() %>%
       fromJSON()
     
-    # FROM THE RESPONSE EXTRACT LATITUDE AND LONGITUDE COORDINATES
+    # Extract coordinates 
     coordinates <- response$features$geometry$coordinates[[1]]
     lon <- coordinates[1]
     lat <- coordinates[2]
     
+    # Coerce to R data object 
     loc <- tibble(name = name[i], 
                   address = str_replace_all(addr[i], "%2C", ","),
                   latitude = lat, longitude = lon)
@@ -229,26 +209,18 @@ geocode <- function(name, address){
   return(loc)
 }
 
-geo_data <- geocode(name = apartment_info$location,
-                    address = apartment_info$location)
+geo_data <- geocode(name = apartment_info$location, address = apartment_info$location)
 ```
 
 ## Generating the map
 
-Once we have retrieved the coordinates of the apartments, we can plot the data.
-To do this, we use the leaflet package, with in-build maps. For sake of illustration,
-we additionally add a colour to the provided marker. Cheap apartments receive a 
-green flag, whereas expensive ones receive a red flag. Apartments that don't display any
-pricing information get a grey colour marker.  
+Once we have retrieved the coordinates of the apartments, we can plot the data. To do this, we use the leaflet package, with in-build maps. For sake of illustration, we additionally add a colour to the provided marker. Cheap apartments receive a green flag, whereas expensive ones receive a red flag. Apartments that don't display any pricing information get a grey colour marker.  
   
-Finally, we can adjust the information that is retrieved by clicking on the marker.
-Here, we display the address, rent and number of rooms. For further information
-one can click on the more info link.  
+Finally, we can adjust the information that is retrieved by clicking on the marker. Here, we display the address, rent and number of rooms. For further information one can click on the `more info` link.  
   
-The link works as the whole file is rendered in HTML. This allows us to render
-HTML specific keywords and commands like <br> for a newline and href for a link.  
+The link is clickable as the whole file is rendered in HTML. This allows us to use HTML specific keywords in the formatting of the pop-up with commands like <br> for a newline and href for a link.  
   
-```{r render_map, fig.align='center', fig.pos='h'}
+```{r render_map, fig.align='center', fig.pos='h', warning = FALSE}
 # Add the coordinates to the original dataset
 plot_data <- geo_data %>% unique() %>%
   left_join(apartment_info,
@@ -294,3 +266,4 @@ leaflet(plot_data) %>%
                     label = ~as.character(plot_data$name))
 ```
 
+  
